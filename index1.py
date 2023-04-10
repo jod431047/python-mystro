@@ -10,36 +10,41 @@ games :
 -names ---> list[count]
 -x,y :1-->100
 ''' 
+class Game :
 
-def no_duplicate(sentence):
-    words = sentence.split(' ')
-    new_words =[]
-    for w in words :
-        if w in new_words:
-            continue
-        else:
-            new_words.append(w)
+    def no_duplicate(self,sentence):
+        words = sentence.split(' ')
+        new_words =[]
+        for w in words :
+            if w in new_words:
+                continue
+            else:
+                new_words.append(w)
 
-            new_sentence = ' '.join(new_words)
-            print(new_sentence)
+                new_sentence = ' '.join(new_words)
+                print(new_sentence)
+
+    def names_count(self,names):
+        count = []
+        for n in names:
+            count.append(len(n))
+        print(count) 
+
+
+    def divided_by(self,x,y):
+        result =[]
+        for n in range(1,101):
+            if n%x ==0 and n%y == 0:
+                result.append(n)
+        print(result)   
+
+g1 = Game()
+
+
+
+
+
 
 #no_duplicate('my name is is is jihad') 
-
-
-def names_count(names):
-    count = []
-    for n in names:
-        count.append(len(n))
-    print(count) 
-
 #names_count(['ahmad','ali','jihad'])   
-
-def divided_by(x,y):
-    result =[]
-    for n in range(1,101):
-        if n%x ==0 and n%y == 0:
-            result.append(n)
-    print(result)    
-
-
 #divided_by(5,6)
