@@ -12,6 +12,24 @@ games :
 ''' 
 
 def no_duplicate(sentence):
-    print(sentence)
+    words = sentence.split(' ')
+    new_words =[]
+    for w in words :
+        if w in new_words:
+            continue
+        else:
+            new_words.append(w)
 
-no_duplicate('my name is is is jihad')    
+            new_sentence = ' '.join(new_words)
+            print(new_sentence)
+
+#no_duplicate('my name is is is jihad') 
+
+
+def names_count(names):
+    count = []
+    for n in names:
+        count.append(len(n))
+    print(count) 
+
+#names_count(['ahmad','ali','jihad'])   
