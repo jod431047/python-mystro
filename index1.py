@@ -10,7 +10,22 @@ games :
 -names ---> list[count]
 -x,y :1-->100
 ''' 
+
+
+from typing import Self
+
+
 class Game :
+    def __init__(self):
+        print('''welcome to our game
+        1 :Sentence No Duplicate
+        2 :Names List Count
+        3 :Divided By
+        ''') 
+    user_choice =int (input('Enter Game Number :'))
+    if user_choice == 1 :
+        sentence = input('Enter sentence :')
+    Self.no_duplicate()
 
     def no_duplicate(self,sentence):
         words = sentence.split(' ')
@@ -45,6 +60,6 @@ g1 = Game()
 
 
 
-#no_duplicate('my name is is is jihad') 
+#duplicate('my name is is is jihad') 
 #names_count(['ahmad','ali','jihad'])   
 #divided_by(5,6)
